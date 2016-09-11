@@ -1,0 +1,17 @@
+textarea{
+	resize: none;
+	width: calc(100% - 5px);
+	height: 70px;
+	margin-top: 4px;
+}
+input#title{
+	width: 50%;
+}
+input[type='submit']{
+	float: right;
+}
+input#key{
+	width: 60px;
+	margin-right: 5px;
+	float: right;
+}

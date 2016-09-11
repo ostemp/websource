@@ -1,0 +1,16 @@
+legend{
+	background-color: #aaa;
+	padding: 3px;
+	border: 1px solid #777;
+}
+pre{
+	padding: 6px;
+	display: none;
+	background-color: white;
+	font-family: "Lucida Console", Monaco, monospace;
+	tab-size: 3;
+	white-space:pre-wrap;
+}
+select{
+	width: 250px;
+}

@@ -1,0 +1,32 @@
+textarea{
+	resize: none;
+	width: calc(100% - 5px);
+	height: 70px;
+	margin-top: 4px;
+}
+input#title{
+	width: 50%;
+}
+input[type='number']{
+	margin-bottom: 5px;
+	width: 300px;
+}
+input#key{
+	width: 60px;
+	margin-right: 5px;
+	float: right;
+}
+table{
+	width: 100%;
+}
+img{
+	padding: 0;
+	float: left;
+}
+p{
+	float: right;
+	border: 1px solid green;
+}
+h2{
+	margin: 0;
+}

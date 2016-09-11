@@ -1,0 +1,482 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finance - Notes by Oliver Scholten</title>
+	<meta charset=utf-8>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+			font-family: arial;
+			color: #333;
+		}
+		header{
+			height: 75px;
+			background-color: #6495ED;
+			text-align: center;
+			border-bottom: 3px solid gold;
+		}
+		section{
+			padding: 10px;
+			max-width: 935px;
+			margin: 0 auto;
+		}
+		fieldset{
+			margin-left: 10px;
+			margin-right: 10px;
+			padding-top: 5px;
+			margin-bottom: 5px;
+		}
+		legend{
+			margin-left: 10px;
+		}
+		footer{
+			height: 75px;
+			background-color: #6495ED;
+			text-align: center;	
+			border-top: 3px solid gold;		
+		}
+		h1{
+			padding-bottom: 5px;
+			color: black;
+		}
+		p{
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 5px;
+			text-align: justify;
+		}
+		div.images{
+			text-align: center;
+			margin: 0 auto;
+		}
+		img{
+			margin: 2px;
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+		strong{
+			font-weight: bold;
+		}
+		strong.topic{
+			color: green;
+		}
+		strong.idea{
+			color: purple;		
+		}
+		ul, ol{
+			padding-left: 35px;
+		}
+		li{
+			padding: 2px 0;
+		}
+		a{
+			color: black;
+			text-decoration: underline;
+		}
+		.goldtrim{
+			border: 2px solid gold;
+		}
+	</style>
+
+</head>
+<body>
+
+<header>
+	<section>
+		<h1>Finance: A Quantitative Exploration</h1>
+		<h5>notes by Oliver Scholten</h5>
+	</section>
+</header>
+
+<section>
+	<p>Welcome to my personal collection of finance notes and resources. I have created a vault of information both for personal reference and for others to use, I am not affiliated with any of the sources used. I have aimed to keep things as simple and useful as possible and offer diagrams and explanations for complex topics along with pictures of my original paper notes.</p>
+	<p>Throughout these notes, links will be represented <a>like this</a> along with <strong class="topic">important topics</strong> and <strong class="idea">key ideas</strong> having different colours.</p>
+
+	<fieldset>
+		<legend>ECON 251: Financial Theory (Lecture Notes)</legend>
+		<p>These notes were written to accompany <a href="http://oyc.yale.edu/economics/econ-251" target="blank">ECON 251: Financial Theory</a> offered by <a href="http://oyc.yale.edu/" target="blank">Open Yale courses</a>. Equations are written in LaTeX and exported using <a href="https://www.codecogs.com/latex/eqneditor.php" target="blank">this site</a>.</p>
+
+		<!-- 1 -->
+		<fieldset>
+			<legend>1: Why Finance?</legend>
+			<p>Quantitative finance is the opposite of psychological economics, it aims to analyse the economy mathematically using algorithmic approaches and models. It stems from the notion that stock prices are essentially random in their fluctuations but can be modelled and by extension predicted. Financial theory defines a set of rules and guidelines governing traditional finance.</p>
+
+			<p><strong>Index</strong> - a collection of data gathered over a period of time.</p>
+			<p><strong>Leverage</strong> - using a small sum to generate a larger sum through various methods.</p>
+			<p><strong>Principle Guarentee</strong> - assurance that no money will be lost once loaned.</p>
+			<p><strong>Efficient Market Theory</strong> - the idea that <strong class="topic">the market</strong> will balance itself if allowed to trade freely and openly.</p>
+			<p><strong>Monopoly</strong> - singular control of an entire sector (leads to instability).</p>
+
+			<p>Financial systems are used to transfer wealth between states via competitive promises and to enforce those promises. The enforcement is critical as without it, the promises are worthless.</p>
+		</fieldset>
+		<!-- 2 -->
+		<fieldset>
+			<legend>2: Utilities, Endowments, and Equilibrium</legend>
+			<p>To begin the transition from traditional finance into quantitative methods, we must first define a few basic terms which will go on to be the building blocks of more complex models;</p>
+			<p><strong>Welfare</strong> - how important a given asset is to an individual (represented as a function).</p>
+			<p><strong>Endowment</strong> - the current quantity of any given asset that an individual has (defined using bracketed notation). </p>
+
+			<p>An <strong class="idea">economics model</strong> is simply a mathematical representation of a trading scenario. Each model consists of a series of equations which describe relationships between entities.</p>
+
+			<p><strong>Exogenous Variable</strong> - values which cannot be influenced or accurately predicted (external).</p>
+			<p><strong>Endogenous Variable</strong> - values which are not attributed to any external factors.</p>
+
+			<p>An example of an equation which forms part of a model is a welfare function. Below are three welfare functions for people (A,B and C) showing their relationships to assets x and y (how much they are willing to invest in x in relation to y). A represents a linear welfare function (a rarity only used as proof). B is a quadratic function and C is logarithmic.</p>
+
+			<div class="images">
+			<img src="img/basicwelfare.svg">
+			<img src="img/quadwelfare.svg">
+			<img src="img/logwelfare.svg">
+			</div>
+
+			<p>In addition to welfare functions, the endowment of individuals is represented in terms of the endowment of goods x and y. The equations below show the amount of each good A and B currently own.</p>
+
+			<div class="images">
+			<img src="img/endowmentone.svg">
+			<img src="img/endowmenttwo.svg">
+			</div>
+		</fieldset>
+		<!-- 3 -->
+		<fieldset>
+			<legend>3: Computing Equilibrium</legend>
+			<p>Using the welfare and endowment equations, an equilibrium can be computed. This is the distribution of goods (x and y) such that neither person A or B can be better off without the other being worse off, this is also known as the <strong class="idea">Pareto efficiency</strong> of the system.</p>
+			<p>To begin computing equilibrium, we must first define the welfare and endowment functions for two people (A and B).</p>
+
+			<div class="images">
+			<img src="img/awelfare.svg">
+			<img src="img/bwelfare.svg">
+			</div>
+			<div class="images">
+			<img src="img/aendowment.svg">
+			<img src="img/bendowment.svg">
+			</div>
+
+			<p>With these defined, we need to define the endogenous variables we wish to find (the price of x and y along with the amount of x and y both A and B have at equilibrium).</p>
+			<div class="images"><img src="img/variables.svg"></div>
+
+			<p>Now that we know what we need to find, lets define the economy by finding the total amount of goods x and y available. These equations are known as budget sets and form the second of the necessary model components.</p>
+
+			<div class="images">
+			<img src="img/aecon.svg">
+			<img src="img/becon.svg">
+			</div>
+			<div class="images">
+			<img src="img/totalx.svg">
+			<img src="img/totaly.svg">
+			</div>
+
+			<p>Before we continue, we need to define a new term.</p>
+			<p><strong>Margin Utility</strong> - the amount of value an individual gets from each successive gain of a given good.</p>
+			<p>We can now define the margin utility of both good x and good y by differentiating the welfare function:</p>
+
+			<div class="images"><img src="img/margina.svg"></div>
+			<div class="images"><img src="img/marginb.svg"></div>
+
+			<p>The important note here is that I have equated margin utilities. This enforces the Pareto efficiency of the system as there is a finite amount of goods available. This is also the reason that equations in economics always have a solution - the final value of the system must match the starting value (in equilibriums).</p>
+
+			<p>Now that all three of the key equations have been defined (welfare & endowments/ budget sets/ margin utilities), it is time to solve the equilibrium. The first step is to assume one price as being 1, this lets us solve the equilibrium using relative values i.e. x is represented as a multiplicative of y.</p>
+
+			<div class="images">
+			<img src="img/pyone.svg">
+			<img src="img/xdemand.svg">
+			<img src="img/xbdemand.svg">
+			</div>
+			<div class="images">
+			<img src="img/xdemand2.svg">
+			<img src="img/xbdemand2.svg">
+			</div>
+
+			<p>Now we have a basic simultaneous equation with two unknowns, from here we can add in the values from the budget set to calculate the relative price.</p>
+
+			<div class="images">
+			<img src="img/px1.svg">
+			<img src="img/px2.svg">
+			</div>
+
+			<p>Putting the relative price of x back in to the above equations gives us the following values fo x(A) and x(B).</p>
+
+			<div class="images">
+			<img src="img/xa.svg">
+			<img src="img/xb.svg">
+			</div>
+
+			<p>These can then be put into the budget set equations to find out how much of y each person can afford given the amount of x they own. The results of this calculation yields the following:</p>
+
+			<div class="images">
+			<img src="img/ya.svg">
+			<img src="img/yb.svg">
+			</div>
+			<div class="images">
+			<img src="img/yaans.svg">
+			<img src="img/ybans.svg">
+			</div>
+
+			<p>As you can see, the total quantities of x and y have not changed, however they have been redistributed such that equilibrium has been reached. To conclude, below are the before and after endowments of both A and B.</p>
+
+			<div class="images">
+			<img src="img/aendowment.svg">
+			<img src="img/bendowment.svg">
+			</div>
+
+			<div class="images">
+			<img src="img/aendowmentafter.svg">
+			<img src="img/bendowmentafter.svg">
+			</div>
+		</fieldset>
+		<!-- 4 -->
+		<fieldset>
+			<legend>4: Efficiency, Assets, and Time</legend>
+			<p>Question: Why is the free market so good?</p>
+			<p><strong>Diminishing Market Utility</strong> - when the value of each successive good decreases in worth to the person aquiring it (quadratic or logarithmic welfare function).</p>
+			<p>The free market enables equilibrium to occur, maximising the sum of utilities. Having diminishing market utility means when dy/dx = 0, it implies the maximum of x has been reached. If the margin utilities are the same, euilibrium does not maximise the sum of utilities.</p>
+			<p><strong>Constant Market Utility</strong> - when gaining successive goods has no effect on their worth to the owner (few examples).</p>
+			<p>Models can be used to model individual behaviour but can also represent any number of people, the important thing is that a welfare function in effect defines the behaviour so as long as all the behaviours are the same, the outcome will be the same, irrespective of the number of people. This can be summarised by the equations below.</p>
+
+			<div class="images">
+			<img src="img/sumutilities.svg">
+			<img src="img/sumx.svg">
+			<img src="img/sumy.svg">
+			</div>
+
+			<p>Maximum welfare can alway be defined using the following equation, the sum of the value of all the goods after equilibrium is equal to the sum of the endowment of all parties before equilibrium</p>
+
+			<div class="images">
+			<img src="img/welfareequation.svg">
+			</div>
+
+			<p>An important discovery as a result of the above equations was the <strong class="idea">indifference curve</strong> developed by Edgeworth. It visualises the effect equilibrium has on the ratio of goods each individual posesses, for example a person may be happy with 2 oranges and 1 apple but equally happy with 1 orange and 2 apples, if they are worth the same. The equations above can be used to find the position where curves overlap i.e. when both people have as much of all goods as possible (equilibrium).</p>
+			<p>The calculations above all form part of the <strong class="idea">first theorem of welfare economics</strong> and were used to calculate the <strong class="idea">general equilibrium</strong> of the economy. General equilibrium (theory) attempts to explain supply, demand and prices in any market and results in a single 'general' equilibrium.</p>
+			<p>There are several flaws with general equilibrium, mainly the justice based argument - that is it does not factor in the social fairness of the allocations as it obeys Pareto efficiency. Other critical weaknesses include lack of adjustments for externalities, in this model people do not affect eachother's behaviour and dependencies on external things are not accounted for. Another critical weakness is that diminishing margin utility isn't always true (think the value of 1 shoe compared to 2), and it assumes perfect competition which doesn't happen in the real world. It does give a good foundation on which to build more complex models, including financial models.</p>
+			<p><strong>Financial Model</strong> - a mathematical model targeting financial assets and other financial factors.</p>
+			<p>Converting an economics model (as in earlier lessons) into a financial model requires several modifications.</p>
+			<ul>
+				<li>Add <strong class="idea">time</strong> as a factor</li>
+				<li>Add risk and its effects on trading</li>
+				<li>Include money with interest rates and credit</li>
+				<li>Include banks and institutions roles</li>
+				<li>Add conditions for collateral and defaults</li>
+				<li>Add <strong class="idea">assets</strong></li>
+			</ul>
+
+			<p>Incorporating time into the model requires the least modification (none). Instead think of x as any given good and y as the same good an amount of time later. The amount of time is up to you but any financially relevant increment makes sense (3 months/ 12 months etc.).</p>
+			<p>Assets are more difficult to implement as they require their own variables, here we introduce D for both x and y representing the current payment and the future payment of any asset. These new values affect Px and Py along with introducing several more variables as we will go on to discuss.</p>
+			<div class="images"><img src="img/assetintro.svg"></div>
+
+		</fieldset>
+		<!-- 5 -->
+		<fieldset>
+			<legend>5: Present Value Prices and the Real Rate of Interest</legend>
+			<p>The price of any good depends on its margin utility, with a high margin utility the good will keep more of its value over time (can be higher than 1), with a low margin utility the good depreciates in value with time.</p>
+			<p><strong>Present Value Price</strong> - the price of something if you were to buy it today i.e. using today's currency.</p>
+			<p>Fisher's theory of financial equilibrium incorporates the ideas of the economic model we have seen before, this time focussing on financial assets (stocks) and their behaviour along with several new variables. The variables he introducedincluded the current price of the stock and the dividends that stock would pay in period 2 of the model. Including these variables lets us mathematically quantify the financial economy to highlight any flaws both in the model and in the economy.</p>
+			
+			<div class="images"><img src="img/financialvariables.svg"/></div>
+			
+			<p>Using the above variables, if we define some values we can go on to create a budget set for the financial model.</p>
+			
+			<div class="images">
+				<img src="img/originalownership.svg"/>
+			</div>
+			<div class="images">
+				<img src="img/budgetset1.svg"/>
+				<img src="img/budgetset2.svg"/>
+			</div>
+			
+			<p><strong>Arbitrage</strong> - when two identical objects have different values.</p>			
+			<p><strong>Inflation</strong> - how much an asset will change in value over time.</p>
+			
+			<p>Fisher's ideas allow us to determine inflation using the equation below. One important thing to note is that Fisher's model assumes no defaulting on payments (collateral).</p>
+			
+			<div class="images"><img src="img/inflation.svg"/></div>
+			
+			<p><strong>Selling Short</strong> - this is when a trade is made for an asset in the future, without any collateral.</p>			
+			
+			<p>With the model now converted to include stocks, we can see that stocks effectively add to the endowments of goods as they pay dividends. With this knowledge we can reduce the financial equilibrium to a general equilibrium and solve it in the same way. Fisher also saw that the model is the same for all equilibriums dependant on time.</p>
+			
+			<div class="images"><img src="img/neweconomy.svg"/></div>
+			
+			<p>Given enough information we could go on to solve this equilibrium but as we've gotten this far we can clearly see that this is now a general equilibrium. Fisher's next addition was the <strong class="idea">real rate of interest</strong>, that is how do the prices of present and future assets compare mathematically. This can be calculated using the equation below.</p>
+
+			<div class="images"><img src="img/realrateofinterest.svg"/></div>
+
+			<p>Given all we have learnt from Fisher, there are some problems with his model which we will discuss in more detail but for now it does not explain how much of each stock the investors hold, it also does not explain inflation or the nominal rate of interest (what the banks will give) but it does explain the real rate of interest.</p>
+			<p>With all that said, the real rate of interest allows us to complete the <strong class="idea">fundamental theorem of asset pricing</strong>, as shown in the equation below.</p>
+			
+			<div class="images"><img src="img/theoryofassetpricing.svg"/></div>
+		</fieldset>
+		<!-- 6 -->
+		<fieldset>
+			<legend>6: Irving Fisher's Impatience Theory of Interest</legend>
+			
+			<p>Lets first define an economy before discussing details so that there is something to reference.</p>
+			
+			<div class="images"><img src="img/econ6variables.svg"/></div>
+			<div class="images">
+				<img src="img/welfares6a.svg"/>
+				<img src="img/welfares6b.svg"/>
+			</div>
+			<div class="images">
+				<img src="img/values6a.svg"/>
+				<img src="img/values6b.svg"/>
+			</div>
+			<div class="images">
+				<img src="img/endowments6a.svg"/>
+				<img src="img/endowments6b.svg"/>
+			</div>
+			<div class="images"><img src="img/dividends6.svg"/></div>
+			<div class="images">
+				<img src="img/totals6x1.svg"/>
+				<img src="img/totals6x2.svg"/>
+			</div>
+			<div class="images"><img src="img/variables6.svg"/></div>
+			
+			<p>Now that things look complicated enough, lets reduce the above to a general equilibrium and solve it.</p>
+			
+			<div class="images"><img src="img/solvedvariables6.svg"/></div>			
+			<div class="images"><img src="img/solvedeqn6.svg"/></div>
+			<div class="images">
+				<img src="img/ea16.svg"/>
+				<img src="img/eb16.svg"/>
+			</div>
+			<div class="images">
+				<img src="img/ea6.svg"/>
+				<img src="img/eb6.svg"/>
+			</div>
+			
+			<p>That seems quite complicated but it takes a precise set of steps to define such a model. No we'll go through Fisher's process and see exactly how these conclusions were reached.</p>
+			<ol>
+				<li>Assume no arbitrage as it will complicate things unnecessarily.</li>
+				<li>Define a real rate of interest by assuming the number of goods before the time period is the same as the number of goods after the time period.</li>
+				<li>Assume we know the price of a stock using equation(3) below.</li>
+			</ol>
+			
+			<div class="images"><img src="img/noarbitrage6.svg"/></div>
+			<div class="images"><img src="img/realrateofinterest.svg"/></div>
+			<div class="images">
+				<img src="img/priceofstock6.svg"/>
+				<img src="img/priceofstock6small.svg"/>
+			</div>
+			
+			<p>Fisher assumed that the price of a stock was equal to its dividends minus the real rate of interest, this infers that money in the future is not worth as much as money today, hence the inclusion of interest.</p>
+			<p>Fisher summarised this in a single equation, know as <strong class="idea">Fisher's equation</strong>.</p>
+			
+			<div class="images"><img class="goldtrim" src="img/fisherseqn.svg"/></div>
+			
+			<p>Where 'r' is the real rate of interest, 'i' is the nominal rate of interest and 'g' is inflation.</p>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>7: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>8: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>9: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>10: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>11: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>12: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>13: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>14: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>15: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>16: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>17: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>18: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>19: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>20: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>21: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>22: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>23: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>24: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>25: </legend>
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>26: </legend>
+			
+		</fieldset>
+	</fieldset>
+	
+
+
+</section>
+
+<footer>
+	<section>
+	</section>
+</footer>
+
+</body>
+</html>

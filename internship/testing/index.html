@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <style type="text/css">  
+
+    </style>
+</head>
+<body>
+<h2>XHR Testing Area</h2>
+<button onclick="sendRequest()">Send XmlHttpRequest</button>
+<div id="output"></div>
+<script type="text/javascript">
+
+function sendData(imageData){
+    // first define a new XMLHttpRequest
+    var xhr = new XMLHttpRequest();
+    // open it with method 'post', url 'upload.php' and async 'true'
+    xhr.open("POST", "upload.php", true);
+    // set the request headers 
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    // finally send the request, setting the post variables as the parameter
+    xhr.send("requestType=770&data=" + imagedata);
+    // define a function called when the response succeeds
+    xhr.onload = function() {
+        document.getElementById("output").innerHTML=xhr.responseText + "</br>" + xhr.getAllResponseHeaders();        
+    }
+}
+
+
+function sendRequest(){
+    // first define a new XMLHttpRequest
+    var xhr = new XMLHttpRequest();
+    // open it with method 'post', url 'upload.php' and async 'true'
+    xhr.open("POST", "upload.php", true);
+    // set the request headers 
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    // finally send the request, setting the post variables as the parameter
+    xhr.send("data=thewebpageishere&requestType=770");
+
+    // define a function called when the response succeeds
+    xhr.onload = function() {
+        document.getElementById("output").innerHTML=xhr.responseText + "</br>" + xhr.getAllResponseHeaders();        
+    }
+}
+
+
+</script>
+
+</body>
+</html>

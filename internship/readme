@@ -1,0 +1,9 @@
+>>>READ ME<<<
+
+This program was made to add details of 3D objects into a centralized database to keep a track on what's being printed and how successful they are.
+
+The structure of the program is a standard small php web app, the conneciton information is stored in a seperate file (connection.php) and the rest is fairly intuitive.
+
+Important: The names and locaitons of the images in the uploads folder must not be changed as they correspond to the data in the database. Seperating the two would break everything which would not be fun.
+
+If you need to know how the code works or want to make some changes, email me: o.scholten@2014.hull.ac.uk

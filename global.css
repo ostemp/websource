@@ -1,0 +1,30 @@
+*{
+	font-family: Roboto;
+}
+h1{
+	text-align: center;
+}
+p{
+	text-align: justify;
+}
+section{
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 5px;
+}
+fieldset{
+	padding: 10px;
+	background-color: #aaa;
+	margin-bottom: 15px;
+}
+table{
+	margin: 0 auto;	
+}
+button{
+	width: 100%;
+	font-size: 16px;
+}
+input[type="text"], input[type="number"], textarea{
+	border: 1px solid #777;
+	padding-left: 4px;
+}

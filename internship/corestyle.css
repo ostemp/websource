@@ -1,0 +1,36 @@
+*{
+	font-family: Roboto;
+}
+section{
+	max-width: 900px;
+	margin: 0 auto;
+}
+header{
+	text-align: center;
+}
+textarea{
+	resize: none;
+}
+input#wide{
+	width: 400px;
+}
+input[type="text"]{
+	width: 200px;
+}
+input[type="submit"]{
+	float: right;		
+}
+fieldset{
+	padding-top: 10px;
+	margin-bottom: 15px;
+}
+h1{
+	font-size: 18px;
+}
+h2{
+	font-size: 14px;
+	line-height: 10px;
+}
+p{
+	font-size: 12px;
+}
